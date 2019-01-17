@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Leader Board";
+}
+<section class="leaderBoard text-center" id="leaderBoard">
+    <div class="container sched">
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <hr>
+                <div class="container">
+                    <div class="tab">
+                        @model List<LeaderBoard>
+                        <center>
+                        @if (Model == null || Model.Count == 0)
+                        {
+                            <h4>Sorry, leaderboard not available at the moment!</h4>
+                        }
+                        else
+                        {
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Username</th>
+                                        <th>Score</th>
+                                        <th>LastUpdated</th>
+                                        @if (User.IsInRole("admin"))
+                                        {
+                                            <th>Action</th>
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{int RowNo = 0;}
+                                    @foreach (var position in Model)
+                                    {
+                                        <tr class="@(++RowNo % 2 == 1 ? "trDark" : "trLight")">
+                                            <td style="        width: 10%;">@RowNo</td>
+                                            <td>@position.Username</td>
+                                            <td style="        width: 10%;">@position.Score</td>
+                                            <td style="        width: 15%;">@position.LastUpdated</td>
+                                            @if (this.User.IsInRole("admin"))
+                                            {
+                                                <td style="        width: 30%;">
+                                                    <form class="buttonForm" method="get" action="/LeaderBoard/Edit/@position.Username">
+                                                        <input class="button" type="submit" value="Edit" />
+                                                    </form>
+                                                    <form class="buttonForm" method="post" action="/LeaderBoard/Delete/@position.Username">
+                                                        <input class="button" type="submit" value="Delete" />
+                                                    </form>
+                                                </td>
+                                            }
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            }
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Styles {
+    <link href="@Url.Content("~/css/LeaderBoard/Index.css")" rel="stylesheet" type="text/css" />
+}
