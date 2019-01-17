@@ -195,4 +195,4 @@ Please read [CEWIT's Code Policy](https://dev.cewit.stonybrook.edu/snippets/12) 
 
 ## Author
 
-* **Rohan Karhadkar**
+* **CHAITANYA KALANTRI**
