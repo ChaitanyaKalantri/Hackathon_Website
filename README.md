@@ -1,4 +1,4 @@
-
+###A best project
 # HackAtCewitManagementSystem
 
 This is a .NET Core application - a website for Hackathon. It contains both the backend and frontend code for the website. It has some of its APIs exposed so that other applications can fetch data and display on other platforms like the React Native application for Android and iOS users.
@@ -12,7 +12,7 @@ For development purposes, it can run on localhost. You can also run it on the IP
 * Desktop / Laptop
 * Browser (Tested on Google Chrome)
 
-### Installation
+### Installation(Set-Up)
 
 Clone the **dev** branch and start expo.
 
