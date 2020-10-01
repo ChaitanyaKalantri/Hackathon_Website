@@ -1,13 +1,13 @@
 
-# HackAtCewitManagementSystem
+# HackAtCewitManagementSystem - AnAmazingWebsite
 
-This is a .NET Core application - a website for Hackathon. It contains both the backend and frontend code for the website. It has some of its APIs exposed so that other applications can fetch data and display on other platforms like the React Native application for Android and iOS users.
+This is a .NET Core application - a website for Dedicated Hackers. It contains both the backend and frontend code for the website. It has some of its APIs exposed so that other applications can fetch data and display on other platforms like the React Native application for Android and iOS users.
 
 ## Introduction
 
 For development purposes, it can run on localhost. You can also run it on the IP address of your computer found using `ifconfig` command (for Linux users).
 
-### Requirements
+### Requirements To Be Needed
 
 * Desktop / Laptop
 * Browser (Tested on Google Chrome)
@@ -23,7 +23,7 @@ cd < path >
 
 Open Visual Studio and start the application to run on localhost. If you want it to be accessible to everyone besides your computer, find your IP address using `ifconfig` (for Linux users) and set it as the host address in `Properties/launchSettings.json`.
 
-## Running the tests
+## Platform To Run Tests
 
 Use Visual Studio's test runner UI to run the tests.
 
